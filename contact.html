@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Minh Tan Animal Store</title>
+         <title>About US | Hachiko Store</title>
         <meta charset="utf-8">
         <meta name="keywords" content="web designer; web developer; back-end developer; training">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
@@ -16,8 +16,9 @@
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
-    <style>
-         #contact {
+<script src="contactmatch.js"></script>
+<style>
+     #contact {
         background-color: black;
         color: white !important;/*chỗ này chưa được*/
 
@@ -43,20 +44,21 @@
         #extra-nav-option li a:hover{
             color: white;
         }
-    </style>
 
-    </head>
-    <body>
-        <header>
+</style>
+</head>
+
+<body>
+  <header>
              <nav id="main-nav">
-                <div id="logo-name">MINH TAN store</div>
+                <div id="logo-name">Hachiko Store</div>
                 <ul id="nav-option">
                      <li id="mission"><a href="mission.html" >MISSION</a></li>
-                      <li id="web-ex"><a href="#" >WEB EXCLUSIVES</a></li>
+                      <li id="web-ex"><a href="web.html" >WEB EXCLUSIVES</a></li>
                       <li id="shop"><a href="index.html" >SHOP</a></li>
                       <li id="about"><a href="about.html">ABOUT</a></li>
                       <li id="contact"><a href="contact.html">CONTACT</a></li>
-                      <li id="cart"><a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i>(0)</a></li>
+                      <li id="cart"><a href="cart.html"><i class="fa fa-cart-plus" aria-hidden="true"></i>(<span id="count-cart"></span>)</a></li>
                       <li id="user"><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
                 </ul>
             </nav>
@@ -71,46 +73,42 @@
             
         </header>
         <div id="free"> FREE U.S SHIPPING OVER $99</div>
-        <section id="body-contact">
-             <section id="contact-info" >
-                <h1>Write Us A Message</h1>
-                 <span class="tilte-contact">Name</span>
-                <input required type="text" class="in-contact"/>
-                  <span class="tilte-contact">Email</span>
-                <input required type="email" class="in-contact"/>
-                  <span class="tilte-contact">Subject</span>
-                <input required type="text" class="in-contact"/>
-                  <span class="tilte-contact" >Your message</span>
-                <input required type="text" class="in-contact" id="ur-mess" >
-                 <div id="send">
-                    <p>Leave this field blank <input required type="text"/></p>
-                    <button>Send !</button>
-                 </div>
-                 <div id="trouble">
-                     <h3>Having trouble ordering online?</h3>
-                     <h5>For customer service or wholesale inquiries please call 718.384.6203</h5>
-                 </div> 
-                 <div id="join-us">
-                    <span id="j-u">Join us on:</span>
-                     <span><a href="#">Twitter </a>/</span>
-                     <span><a href="#">Facebook </a>/</span>
-                     <span><a href="#">Pinterest </a>/</span>
-                    <span> <a href="#">Instagram </a></span>
-                 </div>
-                  <div id="dog-quote-contact">
-                        <h3>All animals should have a home. </h3>
-                        <h3>Help us spread the word.</h3>
-                    </div>
-                    <div id="mission-input-contact">
-                        <input required type="email" id="input-email-m" placeholder="email address"/>
-                        <span id="join-m"><a href="#"></a>Join</span>
-                    </div>
-            </section>
-            
-            
-        </section>
-        
-        <footer>
+<div id="contactfirst">
+    <div id="contact-center">
+        <h1>Write Us A Message</h1>
+        <div class="contact-text">Name</div>
+        <input type="text" class="contact-input" id="t1"/>
+        <div class="contact-text">Email</div>
+        <input type="email" class="contact-input" id="t2"/>
+        <div class="contact-text">Subject</div>
+        <input type="text" class="contact-input" id="t3"/>
+        <div class="contact-text">Your message</div>
+        <textarea cols="68" rows="3" id="contact-input-1"></textarea>   
+    	<div id="contact-center-send"><button onclick="return validate()">SEND</button></div>
+    </div>
+    <div class="contact-footer">
+        <div class="text-1">Having trouble ordering online?</div>
+        <div class="text-2">For customer service or wholesale inquiries please call 0705.352.451</div>
+    </div> 
+    <div class="contact-footer">
+    	<div class="text-1">Join us on:</div>
+        <div class="text-2">
+        	<span><a href="https://twitter.com/" style="color:#000"> Twitter </a> / </span>
+            <span><a href="https://www.facebook.com/" style="color:#000"> Facebook </a> / </span>
+            <span><a href="https://www.instagram.com/" style="color:#000"> Pinterest </a> / </span>
+            <span><a href="https://www.pinterest.com/" style="color:#000"> Instagram </a> / </span>
+        </div>
+    </div>
+    <div class="contact-footer">
+    	<div class="text-2">All animals should have a home.</div>
+        <div class="text-2">Help us spread the word.</div>
+        <div id="contact-footer-input">
+            	<input type="email" id="contact-footer-email" placeholder="Email Address"/>
+                <div id="contact-footer-join"><input type="button" value="Join" onclick="return validate2()"></div>
+        </div>
+    </div>       
+</div>
+      <footer>
             
             <div id="footer-info">
                 <div id="category">
@@ -158,9 +156,9 @@
                         <i class="fa fa-instagram" aria-hidden="true"></i>
                     </div>
                 </div>
-                <div id="minhtan">© 2017     MINHTAN Store ·   Design by Tan Tran M. in Saigon, Vietnam ·  Privacy  ·  Terms</div>
+               <div id="minhtan">© 2018 Hachiko Store ·   Design by Tan Tran M. in Saigon, Vietnam ·  Privacy  ·  Terms</div>
             </div>
            
         </footer>
-    </body>
+</body>
 </html>

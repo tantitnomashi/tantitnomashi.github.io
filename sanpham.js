@@ -298,19 +298,22 @@ function wait(){  // đợi 3s set display hiện ra
 function startframe(locati){ // sau khi chọn thì tắt frame
     
     
-    var mainframe = document.getElementById("main-frame");
-     mainframe.style.display= "none";
+      var mainframe = document.getElementById("main-frame");
+      mainframe.style.display= "none";
     
      //alert(loca);
      var locatag= document.getElementById("location-store");
      if(locati.value === "Hanoi"){
          locatag.innerHTML="28. Hang Xeng St. Hanoi"; 
+         window.localStorage.setItem("loca",1);
      }
     else if(locati.value === "Danang"){
          locatag.innerHTML="11. BachDang St. Danang"; 
+        window.localStorage.setItem("loca",2);
      }
      else if(locati.value === "Saigon"){
          locatag.innerHTML="98. NguyenTrai St. HCM city"; 
+         window.localStorage.setItem("loca",3);
      }
      
     
@@ -377,20 +380,51 @@ function showDetail(){
         span4.setAttribute("id","spandes");
         var detail= document.getElementById("detailPr");
         detail.style.display="block";
-        
-        
+        //scroll màn hình về đầu 
+         mySetTime();
+        // nút tắt
+        var close = document.getElementById("closedetail");
+        close.style.display="block";
     }
     
 }
 
+var id1;
+function truot(){
+    var y= window.pageYOffset;
+     y = y-50;
 
+    if(y <= 500)
+        clearInterval(id1); // không clear interval được
+        window.scroll(0,y);
+}
+function mySetTime(){
+    id1 = window.setInterval(truot,20);
+
+}
 
 ////////////////////////////////////////////////
 function init() {
-    // alert("stupid");
+      var locatag= document.getElementById("location-store");
      if(window.localStorage.getItem("count")== null)
          window.localStorage.setItem("count",0);
-     window.localStorage.setItem("count",0);
+    // kiểm tra coi đã chọn địa điểm chưa 
+      if(window.localStorage.getItem("loca")!= null)
+           {  // alert(window.localStorage.getItem("loca"));
+               var mainframe = document.getElementById("main-frame");
+               mainframe.style.display= "none";
+               var keyloca = window.localStorage.getItem("loca");
+               if(keyloca == '1'){
+                    locatag.innerHTML="28. Hang Xeng St. Hanoi"; 
+               }
+               else if(keyloca == '2'){
+                    locatag.innerHTML="11. BachDang St. Danang"; 
+               }
+               else if(keyloca == '3'){
+                    locatag.innerHTML="98. NguyenTrai St. HCM city"; 
+               }
+           }
+    
 }
 
 
@@ -408,7 +442,9 @@ function addProduct(id_hinh, id_select){
                 c = parseInt(c)+1; 
             window.localStorage.setItem("count",c);   /* thay đổi count */
             window.localStorage.setItem(masp+","+kichco,"1");
-            window.alert("added");
+            window.alert("You have added this item to your cart ! ");
+            var countCart = document.getElementById("count-cart");
+            countCart.innerHTML=c;
             
             
         }
@@ -416,10 +452,8 @@ function addProduct(id_hinh, id_select){
         {
                 result= parseInt(result)+1; 
                 window.localStorage.setItem(masp+ ","+kichco, result); 
-           
-           
-            
         }
+    
 }
 function showHang(){
     //alert(":giohangne");
@@ -472,19 +506,28 @@ function showHang(){
             
             
         }
-    //hết for đóng table
+            //hết for đóng table
              s = s + "</table>";
             // s = s + "<p>Tong tien la: "+ sum + "dollar </p>";
             var total = document.getElementById("totalprice");
             total.innerHTML="Total: " + (sum-1) + ".99$";
             var divchitiet = document.getElementById("chitiet");
             divchitiet.innerHTML=s;
-           totalP = parseFloat(sum);
+        
+    
+            var atag = document.getElementById("totalPina");
+    
+            atag.href+=sum;
           
 }
 function totalPriceinOrder(){
-     var total = document.getElementById("totalpriceS");
-     total.innerHTML="Total: " + parseFloat(totalP-1) + ".99$";
+    var total = document.getElementById("totalpriceS");
+    var string = window.location.href;
+    var getit = new Array();
+    getit=string.split("?");
+    var total1 = unescape(getit[1]);
+    console.log(total1);
+    total.innerHTML="Total: " + parseInt(total1-1) + ".99$";
     
 }
 function order(){
@@ -518,11 +561,15 @@ function sua(control,key){
     window.localStorage.setItem(key,sl_moi);
     showHang();
 }
-function xoa(){
-    var traloi = window.confirm("Are your sure to remove this item out of cart ? ");
+function xoa(keyname){
     
+    
+    var traloi = window.confirm("Are your sure to remove this item out of cart ? ");
     if(traloi == true){
-        window.localStorage.removeItem(key);
+        
+       window.localStorage.removeItem(keyname);
+        
+        //console.log(localStorage.getItem(localStorage.key(2)));
         var c= window.localStorage.getItem("count");
         c--;
         window.localStorage.setItem("count",c);

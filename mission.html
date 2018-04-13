@@ -1,23 +1,70 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
-<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">-->
+
+<!doctype html>
+<html>
+    <head>
+        <title>Mission | Hachiko Store</title>
+        <meta charset="utf-8">
+        <meta name="keywords" content="web designer; web developer; back-end developer; training">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+<script src="contactmatch.js"></script>
 <style>
 body { font-family:Raleway;}
-#mission { background-color:rgba(249,244,230,1); 
+    
+ #mission {
+        background-color: black;
+        color: white !important;/*chỗ này chưa được*/
+
+         }  
+        #extra-nav-option {
+        width: 30%;
+        margin-left: 15%;
+        margin-right: 30%;
+        display: inline-block;
+        }
+        #extra-nav-option li {
+            display: inline-block;
+            text-align: center;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 13px;
+            font-family: 'Rajdhani', sans-serif;
+        }
+        #extra-nav-option li a {
+            color: darkgray;
+            text-decoration: none;
+        }
+        #extra-nav-option li a:hover{
+            color: white;
+        }
+
+#missionfirst { background-color:rgba(249,244,230,1); 
 			width:100%;
 			height:400px;
 			margin-top:25px;
 			border-bottom: 2px dotted black ;
 }
 #mission-center {  	height:100%;
-					width:60%;
-					margin-left:20%;
-					margin-right:20%;
-					padding-top:70px;
-					font-size:22px;
+					width:49%;
+					margin-left:26%;
+					padding-top:130px;
+					font-size:18px;
 					color:#3B3B3B;
 }
 #mission-center div{ margin-top:10px;}
@@ -29,10 +76,10 @@ body { font-family:Raleway;}
 }
 #mission-center-2 { 
 					height:100%;
-					width:60%;
-					margin-left:20%;
-					margin-right:20%;
+					width:49%;
+					margin-left:26%;
 					padding-top:70px;
+                    font-size: 16px;
 					
 }
 #mission-center-2-infor {
@@ -50,7 +97,7 @@ body { font-family:Raleway;}
 }
 #mission-img-2 img{
 			width:90%;
-			margin-left:10px;
+			margin-left:20px;
 			margin-top:10px;
 			height:70%;
 			float:left;		
@@ -62,8 +109,9 @@ body { font-family:Raleway;}
 #mission-img-3 img{
 			width:20px;
 			height:20px;
-			margin-left:30px;
-			margin-top: 50px;
+			margin-left:40px;
+			margin-top: 20px;
+            
 }
 #mission-text{
 			width:60%;
@@ -74,7 +122,7 @@ body { font-family:Raleway;}
 #mission-text div{
 	 		font-size:16px;
 			margin-left:10px;
-			margin-top:10px;
+			margin-top:15px;
 }
 #mission-center-2-footer{
 			text-align: center;
@@ -115,7 +163,32 @@ body { font-family:Raleway;}
 </head>
 
 <body>
-<div id="mission">
+  <header>
+             <nav id="main-nav">
+                <div id="logo-name">Hachiko store</div>
+                <ul id="nav-option">
+                     <li id="mission"><a href="mission.html" >MISSION</a></li>
+                      <li id="web-ex"><a href="web.html" >WEB EXCLUSIVES</a></li>
+                      <li id="shop"><a href="index.html" >SHOP</a></li>
+                      <li id="about"><a href="about.html">ABOUT</a></li>
+                      <li id="contact"><a href="contact.html">CONTACT</a></li>
+                      <li id="cart"><a href="cart.html"><i class="fa fa-cart-plus" aria-hidden="true"></i>(<span id="count-cart"></span>)</a></li>
+                      <li id="user"><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                </ul>
+            </nav>
+            <nav id="extra-nav">
+                <ul id="extra-nav-option">
+                    <li><a href="#" >STATEMENT</a></li>
+                    <li><a href="#" >ADOPT</a></li>
+                    <li><a href="#" >DONATIONS</a></li>
+                </ul>
+            </nav>
+           
+            
+        </header>
+        <div id="free"> FREE U.S SHIPPING OVER $99</div>
+
+<div id="missionfirst">
 	<div id="mission-center">
     	<div><font size="+4">Our Mission</font></div>
         <div>Hachiko Store promotes animal adoption in a very direct way:<font color="#FF9933">let your pet wear your values</font>. By encouraging rescue over purchase, we support animal welfare by asking pets and their owners to help deliver our simple, important message.</div>
@@ -127,7 +200,7 @@ body { font-family:Raleway;}
         <div><font size="+2">Meet Goldie, the beautiful pocket pittie</font></div>
         <div id="mission-center-2-infor">
         	<div id="mission-img">
-            	<div id="mission-img-2"><img src="../img/mission.jpg" /></div>
+            	<div id="mission-img-2"><img src="../img/mission2.jpg" /></div>
                 <div id="mission-img-3">
                 <a href="https://twitter.com/"><img src="../img/tw.png" /></a>
 				<a href="https://www.facebook.com/"><img src="../img/fb.png" /></a>
@@ -137,13 +210,13 @@ body { font-family:Raleway;}
             </div>
             <div id="mission-text">
             	<div>NAME</div>
-                <div>Goldie</div>
+                <div>Goodie</div>
                 <div>BREED</div>
                 <div>mix</div>
                 <div>AGE</div>
                 <div>3 years old female</div>
                 <div>STORY</div>
-                <div>Meet Goldie a three year old pit bull mix. Good with kids and some dogs. Please contact Foster Dogs NYC if you are interested in adopting her.</div>
+                <div>Meet Goodie a three year old pit bull mix. Good with kids and some dogs. Please contact Foster Dogs NYC if you are interested in adopting her.</div>
             </div>
         </div>
         <div>
@@ -153,10 +226,76 @@ body { font-family:Raleway;}
             </div>
             <div id="mission-center-2-footer-input">
             	<input type="email" id="mission-center-2-footer-email" placeholder="Email Address"/>
-                <div id="mission-center-2-footer-join"><input type="button" value="Join"></div>
+                <div id="mission-center-2-footer-join"><input type="button" value="Join" onclick="return validate3()"></div>
             </div>
         </div>
     </div>
 </div>
+    
+    
+    <div id="contact-center">
+        <h1>Your donations</h1>
+        <div class="contact-text">Name/Organization</div>
+        <input type="text" class="contact-input" id="t9"/>
+        <div class="contact-text">Email</div>
+        <input type="email" class="contact-input" id="t10"/>
+        <div class="contact-text">Donation</div>
+        <input type="text" class="contact-input" id="t11"/>
+        <div class="contact-text">Your message</div>
+        <textarea cols="68" rows="3" id="contact-input-1"></textarea>   
+    	<div id="contact-center-send"><button onclick="return validate4()">Donate</button></div>
+    </div>
+    <footer>
+            
+            <div id="footer-info">
+                <div id="category">
+                    <div class="cate-div">
+                        <div class="cate-title" >CUSTOMER CARE</div>
+                        <span><a href="about.html"></a>Sizing Chart</span>
+                         <span><a href="about.html"></a>Return Policy</span>
+                         <span><a href="about.html"></a>Retailers</span>
+                        
+                    </div>
+                    <div class="cate-div">
+                        <div class="cate-title" >MISSION</div>
+                        <span><a href="mission.html"></a>Statement</span>
+                         <span><a href="mission.html"></a>Donations</span>
+                         <span><a href="mission.html"></a>Adopt</span>
+                        
+                    </div>
+                    <div class="cate-div">
+                        <div class="cate-title" >SHOP</div>
+                        <span><a href="index.html"></a>Leashes</span>
+                         <span><a href="index.html"></a>Collars & Harnesses</span>
+                         <span><a href="index.html"></a>Accessories</span>
+                        
+                    </div>
+                </div>
+                <div id="email">
+                    <div id="quote">
+                        <span>All animals should have a home.</span>
+                        <span>Help us spread the word.</span>
+                    </div>
+                    <div id="input">
+                        <input required type="email" id="input-email" placeholder="email address"/>
+                        <span id="join"><a href="#"></a>Join</span>
+                    </div>
+                </div>
+                <div id="certi">
+                    <img src="img/b-corp-logo_b.png">
+                </div>
+                <div id="icon-license">
+                    <span id="license"><i class="fa fa-newspaper-o" aria-hidden="true"></i>HANDCRAFTED IN BROOKLYN, NY</span>
+                    <div id="icon">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        <i class="fa fa-pinterest" aria-hidden="true"></i>
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div id="minhtan">© 2018 Hachiko Store ·   Design by Tan Tran M. in Saigon, Vietnam ·  Privacy  ·  Terms</div>
+            </div>
+           
+        </footer>
 </body>
 </html>

@@ -21,7 +21,12 @@
             body{
                 height: 1700px;
             }
-             #ddh {
+            
+            
+            a {
+                text-decoration: none;
+            }
+            #ddh {
                 width: 100%;
                 height: auto;
                 float: left;
@@ -136,9 +141,7 @@
                 border: 1px solid dimgray;
                 transform: scale(1.2);
             }
-            a {
-                text-decoration: none;
-            }
+
         </style>
         <script src="sanpham.js"></script>
             
@@ -146,17 +149,18 @@
     
   
     <body onload="showHang()">
-       
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
         <header>
              <nav id="main-nav">
                 <div id="logo-name">Hachiko  store</div>
                 <ul id="nav-option">
                      <li id="mission"><a href="mission.html" >MISSION</a></li>
-                      <li id="web-ex"><a href="#" >WEB EXCLUSIVES</a></li>
+                      <li id="web-ex"><a href="web.html" >WEB EXCLUSIVES</a></li>
                       <li id="shop"><a href="index.html" >SHOP</a></li>
                       <li id="about"><a href="about.html">ABOUT</a></li>
                       <li id="contact"><a href="contact.html" >CONTACT</a></li>
-                      <li id="cart"><a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i>(<span id="count-cart">0</span>)</a></li>
+                      <li id="cart"><a href="cart.html"><i class="fa fa-cart-plus" aria-hidden="true"></i>(<span id="count-cart"></span>)</a></li>
                       <li id="user"><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
                 </ul>
             </nav>
@@ -168,6 +172,8 @@
             
         </div>
         <div id="totalprice">   </div>
-        <a href="order.html"><input id="orderin4" type="submit" value="ORDER" onclick="return validdate()"></a>
+        <a href="order.html?" id="totalPina"><input id="orderin4" type="submit" value="ORDER" onclick="return validdate()"></a>
     </body>
+    
+    
 </html>
