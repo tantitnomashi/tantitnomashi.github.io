@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+     <head>
+        <title>Hachiko Store || Coolest style for your pet  </title>
+        <meta charset="utf-8">
+        <meta name="keywords" content="web designer; web developer; back-end developer; training">
+        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
+         <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
+
+
+        <style>
+            body{
+                height: 900px;
+            }
+             #ddh {
+                margin-top: 20px !important;
+                margin-left: 50px;
+                margin-right: 50px;
+               margin-bottom: -30px;
+                width: 95%;
+                height: auto;
+                float: left;
+                font-size: 30px;
+              /*  border: 1px dotted black;*/
+              /*  border-radius: 20px;*/
+                padding: 2%;
+                box-sizing: border-box;
+                font-family: 'Nanum Myeongjo';
+                font-weight: lighter;
+              
+                 
+                 
+                
+                
+            }
+            #ddh div {
+                 line-height: 50px;
+            }
+            .ur-order {
+                font-family: 'Inconsolata', serif;
+                font-size: 50px !important;
+                font-weight: bolder;
+                line-height: 50px;
+                border-bottom: 1px solid gray;
+                margin-bottom: 20px;
+                padding-bottom: 5px;
+            }
+            #kh{
+                
+                border: 1px solid gray;
+            }
+            .order-info {
+                width: 40%;
+                height: 400px;
+                float: left;
+                border: 0.5px dotted black;
+                border-radius: 20px;
+                margin: 30px;
+                padding: 30px;
+                
+            }
+            .order-info div {
+                font-size: 25px;
+                font-family: 'Nanum Myeongjo';
+                height: 70px;
+            }
+            .order-info div span {
+                color: red;
+            }
+            .order-info #t1, #t4 {
+                width: 500px;
+                height: 40px;
+                line-height: 40px;
+                margin-left: 0px
+                    
+            }
+             .order-info #t2 , #t5 {
+                width: 500px;
+                height: 40px;
+                line-height: 40px;
+                margin-left: 50px
+                    
+            }
+             .order-info #t3 ,#t6 {
+                width: 500px;
+                height: 40px;
+                line-height: 40px;
+                margin-left: 30px !important;
+                
+                    
+            }
+            #nguoinhan{  
+               
+               
+                font-family: 'Inconsolata', serif;
+                font-size: 25px ;
+                font-weight: bolder;
+                line-height: 25px;
+            }
+            #inputnguoinhan{
+                margin-left: 130px;
+            }
+            #orderin4{
+                display: block;
+                height: 50px;
+                width: 150px;
+                border-radius: 10px;
+                position: fixed;
+                top: 730px;
+                right: 250px;
+                background-color: white;
+                font-family: 'Inconsolata', serif;
+                font-weight: bolder;
+                transition: all 0.3s;
+            }
+            #orderin4:hover{
+                transform: scale(1.2);
+                background-color: #222;
+                color: white;
+            }
+              #totalpriceS {
+                font-size: 50px;
+                font-weight: lighter;
+               font-family: 'Inconsolata';
+                text-align: right;
+                margin-right: 500px;
+                
+                
+            }
+        </style>
+        <script src="sanpham.js"></script>
+            
+    </head>
+    
+  
+    <body onload="order() ; totalPriceinOrder()" >
+       
+        <header>
+             <nav id="main-nav">
+                <div id="logo-name">Hachiko  store</div>
+                <ul id="nav-option">
+                     <li id="mission"><a href="mission.html" >MISSION</a></li>
+                      <li id="web-ex"><a href="#" >WEB EXCLUSIVES</a></li>
+                      <li id="shop"><a href="index.html" >SHOP</a></li>
+                      <li id="about"><a href="about.html">ABOUT</a></li>
+                      <li id="contact"><a href="contact.html" >CONTACT</a></li>
+                      <li id="cart"><a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i>(<span id="count-cart">0</span>)</a></li>
+                      <li id="user"><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                </ul>
+            </nav>
+       </header>
+         
+         
+        <div id="ddh">
+            <div class="ur-order">Your order:  </div>
+            <div id="soddh"> Order Number: </div>
+            <div id="ngaydat">Date order:   </div>
+            <div>Delivery method:  
+                <input type="radio" value="" name="deli"> Cash On Delivery 
+                <input type="radio" value="" name="deli">  Pay Online
+            
+            
+            </div>
+            
+        </div>
+        <div id="kh">
+            <div class="order-info">
+                <div class="ur-order">Customer Infomation</div>
+                <div>Your name: <input type="text" id="t1"><span>*</span></div>
+                <div>Phone: <input type="text" id="t2"><span>*</span></div>
+                <div>Address: <textarea id="t3"></textarea><span>*</span></div>
+            </div>
+            <div class="order-info">
+                <div class="ur-order" >Delivery Infomation</div>
+                <div>Your name:<input type="text" id="t4"><span>*</span></div>
+                <div>Phone: <input type="text" id="t5"><span>*</span></div>
+                <div>Address: <textarea id="t6"></textarea><span>*</span></div>
+                <input id="inputnguoinhan"  type="checkbox" onclick="copy()" ><span id="nguoinhan"> Người nhận là người đặt</span>
+            </div>
+        </div>
+        <div id="totalpriceS">   </div>
+      
+        <input id="orderin4" type="submit" value="CHECK OUT" onclick="return validdate()">
+    </body>
+</html>

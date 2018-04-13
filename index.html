@@ -1,59 +1,234 @@
 <!doctype html>
 <html>
     <head>
-        <title>Minh Tan Animal Store</title>
+        <title>Hachiko Store || Coolest style for your pet  </title>
         <meta charset="utf-8">
         <meta name="keywords" content="web designer; web developer; back-end developer; training">
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="img/logo_icon.png">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-    <style>
-         #shop {
-        background-color: black;
-        color: white !important;/*chỗ này chưa được*/
+        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo" rel="stylesheet">
 
-         }  
-        #extra-nav-option {
-        width: 30%;
-        margin-left: 45%;
-        margin-right: 30%;
-        display: inline-block;
-        }
-        #extra-nav-option li {
+
+        <style>
+             #shop {
+            background-color: black;
+            color: white !important;/*chỗ này chưa được*/
+
+             }  
+            #extra-nav-option {
+            width: 30%;
+            margin-left: 45%;
+            margin-right: 30%;
             display: inline-block;
-            text-align: center;
-            padding-left: 10px;
-            padding-right: 10px;
-            font-size: 13px;
-            font-family: 'Rajdhani', sans-serif;
-        }
-        #extra-nav-option li a {
-            color: darkgray;
-            text-decoration: none;
-        }
-        #extra-nav-option li a:hover{
-            color: white;
-        }
-    </style>
+            }
+            #extra-nav-option li {
+                display: inline-block;
+                text-align: center;
+                padding-left: 10px;
+                padding-right: 10px;
+                font-size: 13px;
+                font-family: 'Rajdhani', sans-serif;
+            }
+            #extra-nav-option li a {
+                color: darkgray;
+                text-decoration: none;
+            }
+            #extra-nav-option li a:hover{
+                color: white;
+            }
+            #main-frame{
+                background-color: rgba(0,0,0,0.5);
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 9999999;
 
+                display: block;
+            }
+            #start {
+                display: block;
+                width: 1000px;
+                height: 450px; 
+                position: absolute; 
+                left: 400px;
+                top: 200px;
+                border-radius: 25px;
+                background-image: url(img/nenstart.jpg);
+
+                  }
+                #choice {
+                   display: block;
+                   margin-top: 50px;
+                   text-align: center;
+                   font-size: 40px;
+                   color: black; 
+                   font-family: 'Poiret One', cursive;
+                   font-weight: bolder;
+                }
+                #but-location{
+                    width: 70%;
+                    margin-top: 220px !important;
+                    margin: auto;
+                }
+                  .but {
+                    display: inline-block;
+                    width: 170px;
+                    height: 50px;
+                    background-color: dimgrey;
+                    color: white;
+                    font-size: 28px;
+                    font-weight: bold;
+                    text-align: center;
+                    line-height: 50px;
+                    border-radius: 10px 10px 10px 10px;
+                    margin: 30px;
+                    font-family: 'Poiret One', cursive;
+                }
+                .but:hover {
+
+                    transform: scale(1.2);
+                    background-color: white;
+                    color: black;
+                    transition: 0.5s;
+                }
+            #detailPr {
+                margin-left: 17%;
+                width: 1200px;
+                height: 600px;
+                display: none;
+                z-index: 9999999;
+                background-color: white;
+                border: 0.5px dotted dimgrey ;
+                border-radius: 20px;
+                margin-bottom: 100px;
+                transition: all 1.5s;
+            }
+            
+            #detailPr img {
+                display: inline-block;
+                width: 500px;
+                height: 500px;
+                float: left;
+                margin: 10px;
+                margin-left: 70px;
+            }
+            #infor{
+                width: 500px;
+                height: auto;
+                margin-left: 5%;
+                font-style: normal;
+                float: left;
+            }
+            #infor span {
+                display: block;
+                width: 100%;
+                color: black;
+               font-family: 'Nanum Myeongjo', serif;
+
+
+                float: left;
+            }
+            #spancode {
+                 font-size: 15px;
+                 margin-top: 30px;
+                 line-height: 40px;
+            }
+            #spanname{
+                
+                font-weight: bolder;
+                font-size: 40px;
+            }
+            #spanprice {
+                 font-weight: bold;
+                font-size: 35px;
+                
+            }
+            #spandes{
+                line-height: 30px;
+                font-weight: lighter;
+                font-size: 15px;
+            }
+            #detailPr input {
+                background-color: coral;    
+                color: white;
+                font-size: 20px;
+                font-weight: lighter;
+                width: 150px;
+                height: 50px;
+                border-radius: 10px;
+                float: left;
+                margin-left: 5%;
+                font-family: 'Raleway';
+                transition: all 0.5s;
+            }
+            #detailPr input:hover {
+                color: orangered;
+                background-color: white;
+                border: 1px solid orangered;
+                transform: scale(1.2);
+            }
+            #spansize {
+                float: left;
+                display: inline-block;
+                width: 500px;
+                height: 50px;
+                line-height: 50px;
+                font-weight: lighter;
+                font-size: 20px;
+                margin-left: 5%;
+                 font-family: 'Raleway';
+                font-weight: bold;
+            }
+            #location-store {
+                width: 300px;
+                height: 40px;
+                line-height: 40px;
+                color: white;
+                font-size: 18px;
+                font-family: 'Poiret One', cursive;
+                font-weight: normal;
+                position: fixed;
+                top: 8px;
+                right: 150px;
+                z-index: 9999999;
+                padding-left: 20px;
+            }
+            
+        </style>
+        <script src="sanpham.js"></script>
+            
     </head>
-    <body>
+    <body onload="display(Leashes), init() ">
+         <div id="location-store">!</div>
+        <div id="main-frame">
+         <div id="start">
+                <div id="choice">Choose Hachiko Store to shopping easily !</div>
+                <div id="but-location">
+                    <input class="but" type="button" value="Hanoi"  onclick="startframe(this)" >
+                    <input class="but" type="button" value="Danang"  onclick="startframe(this)" >
+                    <input class="but" type="button" value="Saigon" onclick="startframe(this)"  >
+                </div>
+            </div>
+        </div>
         <header>
              <nav id="main-nav">
-                <div id="logo-name">MINH TAN store</div>
+                <div id="logo-name">Hachiko  store</div>
                 <ul id="nav-option">
                      <li id="mission"><a href="mission.html" >MISSION</a></li>
                       <li id="web-ex"><a href="#" >WEB EXCLUSIVES</a></li>
                       <li id="shop"><a href="index.html" >SHOP</a></li>
                       <li id="about"><a href="about.html">ABOUT</a></li>
                       <li id="contact"><a href="contact.html" >CONTACT</a></li>
-                      <li id="cart"><a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i>(0)</a></li>
+                      <li id="cart"><a href="cart.html"><i class="fa fa-cart-plus" aria-hidden="true"></i>(<span id="count-cart">0</span>)</a></li>
                       <li id="user"><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
                 </ul>
             </nav>
@@ -67,7 +242,8 @@
            
             
         </header>
-        <div id="free"> FREE U.S SHIPPING OVER $99</div>
+        <div id="free"> FREE URBAN SHIPPING OVER $99</div>
+      
         <section id="main-banner">
          
             <div class="banner" id="img1">
@@ -93,205 +269,45 @@
             <div id="banner-cover"></div>
         
         </section>
+        <!--HẾT PHẦN HEADER-->
+        
+        <!--PHẦN SHOW DETAIL SẢN PHẨM -->
+        
+       
+        <div id="detailPr" >
+            <img src="" id="hinh" >
+            <div id="infor">
+            
+            </div>
+            <span id="spansize"> Choose size for ur boss: 
+                <select id="size">
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                   
+                </select>
+                
+            </span>
+             <input type="button" value="ADD" onclick="addProduct('hinh','size')">
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        <!--HẾT SHOWDETAIL SẢN PHẨM-->
         <section id="kind">
-            <span>Leashes</span>
-            <div class="product">
-                <img src="img/l1.jpg">
-                <div class="product-info">
-                    <span>LIGHT TAN ROPE DOG</span>
-                    <span>LEASH, ADJUSTABLE</span>
-                    <span>62.00$</span>
-                </div>
-            </div>
-            <div class="product">
-                <img src="img/l2.jpg">
-                <div class="product-info">
-                    <span>DARK TAN ROPE DOG</span>
-                    <span>LEASH, ADJUSTABLE</span>
-                    <span>62.00$</span>
-                </div>
-            </div>
-            <div class="product">
-                <img src="img/l3.jpg">
-                <div class="product-info">
-                    <span>RED TAN ROPE DOG</span>
-                    <span>LEASH, ADJUSTABLE</span>
-                    <span>54.00$</span>
-                </div>
-            </div>
-            <div class="product">
-                <img src="img/l5.jpg">
-                <div class="product-info">
-                    <span>ORANGE TAN ROPE DOG</span>
-                    <span>LEASH, ADJUSTABLE</span>
-                    <span>54.00$</span>
-                </div>
-            </div>
-            <div class="product">
-                <img src="img/l4.jpg">
-                <div class="product-info">
-                    <span>DARK TAN ROPE DOG</span>
-                    <span>LEASH, ADJUSTABLE</span>
-                    <span>62.00$</span>
-                </div>
-            </div>
-            <div class="product">
-                <img src="img/l6.jpg">
-                <div class="product-info">
-                    <span>GREEN TAN ROPE DOG</span>
-                    <span>LEASH, ADJUSTABLE</span>
-                    <span>62.00$</span>
-                </div>
-            </div>
-            <div class="product">
-                <img src="img/l7.jpg">
-                <div class="product-info">
-                    <span>HUNTER ROPE DOG</span>
-                    <span>LEASH, ADJUSTABLE</span>
-                    <span>62.00$</span>
-                </div>
-            </div>
-            <div class="product">
-                <img src="img/l8.jpg">
-                <div class="product-info">
-                    <span>DARK TAN ROPE DOG</span>
-                    <span>LEASH, ADJUSTABLE</span>
-                    <span>62.00$</span>
-                </div>
-            </div>
-            <div class="product">
-                <img src="img/L-Blue_Ice_mainthumb.jpg">
-                <div class="product-info">
-                    <span>EASTH BLUE </span>
-                    <span>LEASH, ADJUSTABLE</span>
-                    <span>62.00$</span>
-                </div>
-            </div>
-            <div class="product">
-                <img src="img/L-green_mainthumb.jpg">
-                <div class="product-info">
-                    <span>GREEN WEBBING</span>
-                    <span>LEASH, ADJUSTABLE</span>
-                    <span>62.00$</span>
-                </div>
-            </div>
-            <div class="product">
-                <img src="img/L-sfb_mainthumb.jpg">
-                <div class="product-info">
-                    <span>L' THEATER</span>
-                    <span>LEASH, STANDARD</span>
-                    <span>45.99$</span>
-                </div>
-            </div>
-            <div class="product">
-                <img src="img/L-Orange_yellow_mainthumb.jpg">
-                <div class="product-info">
-                    <span>LAVIE OR</span>
-                    <span>LEASH, ADJUSTABLE</span>
-                    <span>62.00$</span>
-                </div>
-            </div>
-               <span>Collars & Harnesses</span>
-             <div class="product">
-                <img src="img/Orange_harness_mainthumb.jpg">
-                <div class="product-info">
-                    <span>ORANGE HARNESS</span>
-                    <span>LEASH</span>
-                    <span>62.00$</span>
-                </div>
-            </div>
-             <div class="product">
-                <img src="img/red_harness_mainthumb.jpg">
-                <div class="product-info">
-                    <span>RED DOG & CAT</span>
-                    <span>HARNESS </span>
-                    <span>99.99$</span>
-                </div>
-            </div>
-             <div class="product">
-                <img src="img/H_IFB_thumb.jpg">
-                <div class="product-info">
-                    <span>OC</span>
-                    <span>HARNESS limited</span>
-                    <span>78.60$</span>
-                </div>
-            </div>
-             <div class="product">
-                <img src="img/H_OFB_thumb.jpg">
-                <div class="product-info">
-                    <span>MINH TAN</span>
-                    <span>HARNESS Special</span>
-                    <span>62.00$</span>
-                </div>
-            </div>
-             <div class="product">
-                <img src="img/Multi_Color_collar_mainthumb%20-%20Copy.jpg">
-                <div class="product-info">
-                    <span>TEAL OMBRE</span>
-                    <span>COLLAR</span>
-                    <span>15.00$</span>
-                </div>
-            </div>
-             <div class="product">
-                <img src="img/c-ycb_mainthumb.jpg">
-                <div class="product-info">
-                    <span>YELLOW ti</span>
-                    <span>COLLAR</span>
-                    <span>95.25$</span>
-                </div>
-            </div>
-             <div class="product">
-                <img src="img/c-rdb_highres_mainthumb.jpg">
-                <div class="product-info">
-                    <span>RED ti</span>
-                    <span>COLLAR</span>
-                    <span>69.50$</span>
-                </div>
-            </div>
-             <div class="product">
-                <img src="img/black_rope_thumb.jpg">
-                <div class="product-info">
-                    <span>BLACK ROPE</span>
-                    <span>COLLAR</span>
-                    <span>98.99$</span>
-                </div>
-            </div>
-             <span>Accessories</span>
-            <div class="product">
-                <img src="img/Henri_black_mainthumb.jpg">
-                <div class="product-info">
-                    <span>WAXED DOG BED</span>
-                    <span>BLACK</span>
-                    <span>98.99$</span>
-                </div>
-            </div>
-            <div class="product">
-                <img src="img/F-Bandana_blue_mainthumb.jpg">
-                <div class="product-info">
-                    <span>BLUE DOG </span>
-                    <span>BANNADA</span>
-                    <span>28.99$</span>
-                </div>
-            </div>
-            <div class="product">
-                <img src="img/F-Batik-copy_mainthumb.jpg">
-                <div class="product-info">
-                    <span>JEANS BATIK</span>
-                    <span>POP BAG</span>
-                    <span>78.99$</span>
-                </div>
-            </div>
-            <div class="product">
-                <img src="img/F-BedOR_mainthumb%20(1).jpg">
-                <div class="product-info">
-                    <span>ORANGE 12 </span>
-                    <span>DOG BED</span>
-                    <span>98.99$</span>
-                </div>
-            </div>
+            <div class="leash">Leashes</div>
+            
+         
+             <!--<span>Accessories</span>-->
+            
+            </section>
             
             
-        </section>
+        
         <footer>
             <div id="brand">
                 <div id="brand-info">

@@ -16,7 +16,8 @@ body {
 header {
     width: 100%;
     background-color: #222;
-    /* position: fixed;*/
+     position: fixed;
+     top: 0;
     z-index: 99999;
 
 }
@@ -114,7 +115,7 @@ header {
 
 }
 
-/*#banner-cover{
+#banner-cover{
 position: absolute;
 top: 0;
 left: 0;
@@ -123,11 +124,12 @@ height: 600px;
   transition: all 1s;
 background-color: rgba(26, 0, 0,0.2);
 z-index:9999 ;
+    display: none
 }
 #banner-cover:hover{
  
     background-color: rgba(26, 0, 0,0);
-}*/
+}
 
 .banner {
     position: absolute;
@@ -137,6 +139,7 @@ z-index:9999 ;
     height: 600px;
     transition: all 1s;
     text-align: center;
+   
 }
 
 .banner span {
@@ -175,7 +178,7 @@ z-index:9999 ;
 }
 
 #img1 {
-    background-image: url(D:\BMAG\WEB- FrontEnd\ShopC\img\1111.jpg);
+    background-image: url(/img/1111.jpg);
     background-size: cover;
     z-index: 999;
     animation-name: im;
@@ -245,13 +248,24 @@ z-index:9999 ;
     display: block;
     position: relative;
 }
-
-#kind span {
+.leash {
     display: block;
     text-align: center;
+    width: 60%;
     font-family: 'Poiret One', cursive;
     font-size: 40px;
     line-height: 40px;
+    margin-left: 170px;
+    
+}
+#kind span {
+   
+    display: block;
+   
+    font-family: 'Poiret One', cursive;
+    font-size: 40px;
+    line-height: 40px;
+    
 
 
 }
